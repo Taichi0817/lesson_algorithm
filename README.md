@@ -1,1 +1,1 @@
-# lesson_algorithm
+# algorithm
