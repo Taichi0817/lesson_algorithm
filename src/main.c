@@ -5,6 +5,8 @@
 #include "ACN_types.h"
 #include "sort_util.h"
 
+#define ARRAY_SIZE 10  // ← 配列サイズはここで変更可能
+
 /* bogosort関数のプロトタイプ宣言 */
 VD bogosort(S4 *array, U4 size);
 
@@ -15,11 +17,16 @@ VD bogosort(S4 *array, U4 size);
  */
 int main(VD)
 {
-    S4 array[] = {3, 1, 4, 5, 2};
-    U4 size = (U4)(sizeof(array) / sizeof(array[0]));
+    S4 array[ARRAY_SIZE];
+    U4 size = ARRAY_SIZE;
 
     /* 乱数の初期化 */
     srand((U4)time(NULL));
+
+    /* 配列をランダムに初期化（例：1〜99） */
+    for (U4 i = 0; i < size; i++) {
+        array[i] = (S4)(rand() % 99 + 1);  // 1〜99のランダム整数
+    }
 
     printf("整列前: ");
     print_array(array, size);

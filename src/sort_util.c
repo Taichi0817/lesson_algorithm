@@ -1,5 +1,4 @@
 #include "sort_util.h"
-
 /* 配列の内容を表示 */
 VD print_array(const S4 *array, U4 size)
 {
@@ -17,7 +16,7 @@ BL is_sorted(const S4 *array, U4 size)
 {
     U4 i;
 
-    for (i = 0U; i < (size - 1U); i++)
+    for (i = 0U; i < (size - 1U); ++i)
     {
         if (array[i] > array[i + 1U])
         {
@@ -48,4 +47,15 @@ VD swap(S4 *a, S4 *b)
     temp = *a;
     *a = *b;
     *b = temp;
+}
+
+U4 cal_factorial(U4 size)
+{
+    U4 result = 1;
+
+    for (U4 i = 2; i <= size; i++) {
+        result *= i;
+    }
+
+    return result;
 }

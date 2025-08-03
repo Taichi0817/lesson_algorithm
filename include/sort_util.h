@@ -1,6 +1,5 @@
 #ifndef SORT_UTIL_H
 #define SORT_UTIL_H
-
 #include "ACN_types.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -23,5 +22,7 @@ VD shuffle_array(S4 *array, U4 size);
 
 /* 配列の要素を入れ替える関数 */
 VD swap(S4 *a, S4 *b);
+
+U4 cal_factorial(U4 sise);
 
 #endif /* SORT_UTIL_H */
