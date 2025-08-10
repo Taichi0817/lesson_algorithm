@@ -12,7 +12,7 @@ U4 cal_min(U4 size) {
 VD bubblesort(S4 *array, U4 size)
 {
     printf("平均回数: 1/4 * n(n - 1)\n");
-    printf("理論値: %ld\n", cal_factorial(size) / 2);
+    printf("理論値: %ld\n", cal_min(size) / 2);
     printf("最悪回数: 1/2 * n(n - 1)\n");
     U4 count = 0U;
     U1 i, tmp;
