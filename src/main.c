@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 
 #include "ACN_types.h"
@@ -10,6 +11,8 @@
 /* bogosort関数のプロトタイプ宣言 */
 VD bogosort(S4 *array, U4 size);
 
+/* bubblesort関数のプロトタイプ宣言 */
+VD bubblesort(S4 *array, U4 size);
 /*
  * 概要 : メイン関数
  * 引数 : なし
@@ -17,7 +20,9 @@ VD bogosort(S4 *array, U4 size);
  */
 int main(VD)
 {
-    S4 array[ARRAY_SIZE];
+    S4 array[ARRAY_SIZE] = {0};
+    S4 array_bubble[ARRAY_SIZE] = {0};
+    S4 array_bogo[ARRAY_SIZE] = {0};
     U4 size = ARRAY_SIZE;
 
     /* 乱数の初期化 */
@@ -28,13 +33,21 @@ int main(VD)
         array[i] = (S4)(rand() % 99 + 1);  // 1〜99のランダム整数
     }
 
+    memcpy(array_bogo, array, sizeof(S4) * ARRAY_SIZE);
+    memcpy(array_bubble, array, sizeof(S4) * ARRAY_SIZE);
+    printf("bogo\n");
     printf("整列前: ");
     print_array(array, size);
-
-    bogosort(array, size);
-
+    bogosort(array_bogo, size);
     printf("整列後: ");
+    print_array(array_bogo, size);
+
+    printf("bubble\n");
+    printf("整列前: ");
     print_array(array, size);
+    bubblesort(array_bubble, size);
+    printf("整列後: ");
+    print_array(array_bubble, size);
 
     return 0;
 }

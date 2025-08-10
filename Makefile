@@ -9,13 +9,14 @@ SORT_DIR    = $(SRC_DIR)/sort
 SRCS    = $(SRC_DIR)/main.c \
           $(SRC_DIR)/sort_util.c \
           $(SORT_DIR)/bogo.c \
+          $(SORT_DIR)/bubble.c \
           # $(SORT_DIR)/bubble.c \
           # $(SORT_DIR)/quick.c
 
 OBJS    = $(SRCS:.c=.o)
 
 # 実行ファイル名
-TARGET  = bogo_sort
+TARGET  = sort.bin
 
 # ルール定義
 .PHONY: all clean
