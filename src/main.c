@@ -13,6 +13,10 @@ VD bogosort(S4 *array, U4 size);
 
 /* bubblesort関数のプロトタイプ宣言 */
 VD bubblesort(S4 *array, U4 size);
+
+/* stalinsort関数のプロトタイプ宣言 */
+VD stalinsort(S4 *array, U4 size);
+
 /*
  * 概要 : メイン関数
  * 引数 : なし
@@ -23,6 +27,7 @@ int main(VD)
     S4 array[ARRAY_SIZE] = {0};
     S4 array_bubble[ARRAY_SIZE] = {0};
     S4 array_bogo[ARRAY_SIZE] = {0};
+    S4 array_stalin[ARRAY_SIZE] = {0};
     U4 size = ARRAY_SIZE;
 
     /* 乱数の初期化 */
@@ -35,6 +40,7 @@ int main(VD)
 
     memcpy(array_bogo, array, sizeof(S4) * ARRAY_SIZE);
     memcpy(array_bubble, array, sizeof(S4) * ARRAY_SIZE);
+    memcpy(array_stalin, array, sizeof(S4) * ARRAY_SIZE);
     printf("bogo\n");
     printf("整列前: ");
     print_array(array, size);
@@ -48,6 +54,13 @@ int main(VD)
     bubblesort(array_bubble, size);
     printf("整列後: ");
     print_array(array_bubble, size);
+
+    printf("stalinsort\n");
+    printf("整列前: ");
+    print_array(array, size);
+    stalinsort(array_stalin, size);
+    printf("整列後: ");
+    print_array(array_stalin, size);
 
     return 0;
 }
