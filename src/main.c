@@ -33,6 +33,10 @@ int main(VD)
     /* 乱数の初期化 */
     srand((U4)time(NULL));
 
+    if (size < 5U) {
+        printf("ARRAY_SIZEは5以上を指定してください")
+        return;
+    }
     /* 配列をランダムに初期化（例：1〜99） */
     for (U4 i = 0; i < size; i++) {
         array[i] = (S4)(rand() % 99 + 1);  // 1〜99のランダム整数
