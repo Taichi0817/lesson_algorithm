@@ -10,6 +10,7 @@ SRCS    = $(SRC_DIR)/main.c \
           $(SRC_DIR)/sort_util.c \
           $(SORT_DIR)/bogo.c \
           $(SORT_DIR)/bubble.c \
+          $(SORT_DIR)/stalin.c \
           # $(SORT_DIR)/bubble.c \
           # $(SORT_DIR)/quick.c
 
