@@ -15,15 +15,13 @@ VD bubblesort(S4 *array, U4 size)
     printf("理論値: %ld\n", cal_min(size) / 2);
     printf("最悪回数: 1/2 * n(n - 1)\n");
     U4 count = 0U;
-    U1 i, tmp;
+    U1 i;
 
     while (is_sorted(array, size) == (BL)0U)
     {
         for(i=0U;i<size;i++) {
             if(array[i] > array[i+1]) {
-                tmp = array[i];
-                array[i] = array[i+1];
-                array[i+1] = tmp;
+                swap(&array[i], &array[i+1]);
                 count++;
             }
         }
