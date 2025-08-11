@@ -16,7 +16,7 @@ VD bubblesort(S4 *array, U4 size)
     printf("最悪回数: 1/2 * n(n - 1)\n");
     U4 count = 0U;
     U1 i, tmp;
-    
+
     while (is_sorted(array, size) == (BL)0U)
     {
         for(i=0U;i<size;i++) {
@@ -26,7 +26,6 @@ VD bubblesort(S4 *array, U4 size)
                 array[i+1] = tmp;
                 count++;
             }
-
         }
     }
 
