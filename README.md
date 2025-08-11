@@ -4,6 +4,7 @@
 
 ## ファイル構成
 
+```
 .
 ├── Makefile
 ├── README.md
@@ -24,6 +25,7 @@
     └── sort_util.o
 
 4 directories, 14 files
+```
 
 # ビルド方法
 
