@@ -11,6 +11,7 @@ SRCS    = $(SRC_DIR)/main.c \
           $(SORT_DIR)/bogo.c \
           $(SORT_DIR)/bubble.c \
           $(SORT_DIR)/stalin.c \
+          $(SORT_DIR)/quick.c \
           # $(SORT_DIR)/bubble.c \
           # $(SORT_DIR)/quick.c
 
