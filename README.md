@@ -6,25 +6,31 @@
 
 ```
 .
+├── .gitignore
 ├── Makefile
 ├── README.md
+├── a.out
 ├── include
 │   ├── ACN_types.h
 │   └── sort_util.h
 ├── sort.bin
-└── src
-    ├── main.c
-    ├── main.o
-    ├── sort
-    │   ├── bogo.c
-    │   ├── bogo.o
-    │   ├── bubble.c
-    │   ├── bubble.o
-    │   └── quick.c
-    ├── sort_util.c
-    └── sort_util.o
+├── src
+│   ├── main.c
+│   ├── main.o
+│   ├── sort
+│   │   ├── bogo.c
+│   │   ├── bogo.o
+│   │   ├── bubble.c
+│   │   ├── bubble.o
+│   │   ├── quick.c
+│   │   ├── quick.o
+│   │   ├── stalin.c
+│   │   └── stalin.o
+│   ├── sort_util.c
+│   └── sort_util.o
+└── test.c
 
-4 directories, 14 files
+4 directories, 20 files
 ```
 
 # ビルド方法
