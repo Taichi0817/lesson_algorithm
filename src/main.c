@@ -17,6 +17,9 @@ VD bubblesort(S4 *array, U4 size);
 /* stalinsort関数のプロトタイプ宣言 */
 VD stalinsort(S4 *array, U4 size);
 
+/* stalinsort関数のプロトタイプ宣言 */
+VD qsort_main(S4 *array, U4 size);
+
 /*
  * 概要 : メイン関数
  * 引数 : なし
@@ -28,14 +31,15 @@ int main(VD)
     S4 array_bubble[ARRAY_SIZE] = {0};
     S4 array_bogo[ARRAY_SIZE] = {0};
     S4 array_stalin[ARRAY_SIZE] = {0};
+    S4 array_quick[ARRAY_SIZE] = {0};
     U4 size = ARRAY_SIZE;
 
     /* 乱数の初期化 */
     srand((U4)time(NULL));
 
     if (size < 5U) {
-        printf("ARRAY_SIZEは5以上を指定してください")
-        return;
+        printf("ARRAY_SIZEは5以上を指定してください");
+        return 1;
     }
     /* 配列をランダムに初期化（例：1〜99） */
     for (U4 i = 0; i < size; i++) {
@@ -45,6 +49,8 @@ int main(VD)
     memcpy(array_bogo, array, sizeof(S4) * ARRAY_SIZE);
     memcpy(array_bubble, array, sizeof(S4) * ARRAY_SIZE);
     memcpy(array_stalin, array, sizeof(S4) * ARRAY_SIZE);
+    memcpy(array_quick, array, sizeof(S4) * ARRAY_SIZE);
+
     printf("bogo\n");
     printf("整列前: ");
     print_array(array, size);
@@ -66,5 +72,11 @@ int main(VD)
     printf("整列後: ");
     print_array(array_stalin, size);
 
+    printf("quicksort\n");
+    printf("整列前: ");
+    print_array(array, size);
+    qsort_main(array_quick, size);
+    printf("整列後: ");
+    print_array(array_quick, size);
     return 0;
 }
